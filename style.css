@@ -8,7 +8,6 @@ html {
   }
 body{
     display: grid;
-    height: 300vh;
     grid-template-rows: 78px 90vh 100vh 85vh 15vh;
     background-color: #212529;
 }
@@ -71,6 +70,7 @@ nav{
     "more more";
     gap: 20px;
     padding: 30px;
+    height: 100vh;
 }
 #left{
     display: flex;
@@ -105,7 +105,6 @@ nav{
 #right{
     display: flex;
     justify-content: center;
-
     padding: 40px;
     grid-area: right;
 }
@@ -334,13 +333,19 @@ nav{
 
 /* Footer */
 footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background-color: rgba(192,192,192, 0.6);
     padding: 40px;
 }
 
 /* Mobile Solution */
-@media (max-width: 1050px){
+@media (max-width: 1081px){
+    body{
+        grid-template-rows: 78px 34% 40% 30% 4%;
+    }
     #about{
         grid-template-rows: 7fr 7fr 1fr;
         grid-template-columns: 1fr;
@@ -351,9 +356,14 @@ footer{
     }
     #left{
         justify-content: center;
-    }
-    #left{
         text-align: center;
+        padding-top: 0px;
+    }
+    #right{
+        padding-bottom: 0px;
+    }
+    #sosmed{
+        padding: 0;
     }
     #project-section{
         grid-template-columns: 1fr 1fr;
